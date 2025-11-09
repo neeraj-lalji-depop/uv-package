@@ -6,7 +6,6 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
   "httpx>=0.28.1",
-  "pip>=25.3",
 ]
 
 [project.optional-dependencies]
@@ -18,11 +17,27 @@ local = [
     "my-package-neerajlalji"
     ]
 
+[dependency-groups]
+# Testing dependencies - used in CI/CD
+test = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.1.0",  # Coverage reporting
+]
+
+# Development tools - linting, formatting, type checking
+dev = [
+    # "ruff>=0.8.0", not needed due to pre-commit hooks
+    # "mypy>=1.8.0", not needed due to pre-commit hooks
+    "pip>=25.3",
+    "pre-commit>=4.0.0",
+]
+
 [tool.uv]
 # Prevent enabling both at once
 conflicts = [
   [ { extra = "prod" }, { extra = "local" } ],
 ]
+default-groups = [] # Needed to prevent dev installing by default
 
 [tool.uv.sources]
 my-package-neerajlalji = [
@@ -34,4 +49,3 @@ my-package-neerajlalji = [
 name = "testpypi"
 url = "https://test.pypi.org/simple/"
 explicit = true
-

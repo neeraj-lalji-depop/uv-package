@@ -28,4 +28,3 @@ uv publish --publish-url https://test.pypi.org/legacy/ dist/*
 This will:
 1. Build the distribution packages (wheel and source distribution)
 2. Publish them to TestPyPI
-
