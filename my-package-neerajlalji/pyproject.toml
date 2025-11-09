@@ -53,3 +53,13 @@ select = [
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.1.3"
+version_files = [
+    "pyproject.toml:version",
+    "src/my_package_neerajlalji/__version__.py:__version__"
+]
+update_changelog_on_bump = true
+tag_format = "v$version"

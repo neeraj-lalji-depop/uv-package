@@ -4,6 +4,8 @@ This package provides various utility functions for common operations
 like string manipulation, mathematical calculations, and more.
 """
 
+from my_package_neerajlalji.__version__ import __version__
+
 
 def hello() -> str:
     """Return a greeting message from the package.
@@ -15,7 +17,7 @@ def hello() -> str:
         >>> hello()
         'Hello from my-package-neerajlalji! v0.1.2'
     """
-    return "🎉 Hello from my-package-neerajlalji!"
+    return f"🎉 Hello from my-package-neerajlalji! v{__version__}"
 
 
 def add_numbers(a: float, b: float) -> float:

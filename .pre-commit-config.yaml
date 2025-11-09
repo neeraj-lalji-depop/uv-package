@@ -27,3 +27,8 @@ repos:
     hooks:
       - id: mypy
         args: [--ignore-missing-imports, --no-strict-optional]
+
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: v4.9.1
+    hooks:
+      - id: commitizen
