@@ -1,0 +1,37 @@
+[project]
+name = "example-app"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+  "httpx>=0.28.1",
+  "pip>=25.3",
+]
+
+[project.optional-dependencies]
+prod = [
+    "my-package-neerajlalji==0.1.1"
+    ]
+
+local = [
+    "my-package-neerajlalji"
+    ]
+
+[tool.uv]
+# Prevent enabling both at once
+conflicts = [
+  [ { extra = "prod" }, { extra = "local" } ],
+]
+
+[tool.uv.sources]
+my-package-neerajlalji = [
+  { path = "../my-package-neerajlalji", editable = true, extra = "local" },
+  { index = "testpypi", extra = "prod" },
+]
+
+[[tool.uv.index]]
+name = "testpypi"
+url = "https://test.pypi.org/simple/"
+explicit = true
+
