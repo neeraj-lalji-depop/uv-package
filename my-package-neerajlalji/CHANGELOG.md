@@ -14,6 +14,12 @@
 - **my-package**: prevent accidental pypi publishing
 - **example-app**: not a package
 
+## my-package-neerajlalji/v0.3.1 (2025-11-09)
+
+### Fix
+
+- **add-numbers**: fix doc-string
+
 ## my-package-neerajlalji/v0.3.0 (2025-11-09)
 
 ### Feat
