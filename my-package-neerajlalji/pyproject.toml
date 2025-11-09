@@ -51,12 +51,5 @@ select = [
     "D",   # pydocstyle (docstring checks)
 ]
 
-# Ignore specific rules if needed
-ignore = [
-    "D203",  # one-blank-line-before-class (conflicts with D211)
-    "D213",  # multi-line-summary-second-line (conflicts with D212)
-]
-
 [tool.ruff.lint.pydocstyle]
-# Use Google-style docstrings
 convention = "google"
