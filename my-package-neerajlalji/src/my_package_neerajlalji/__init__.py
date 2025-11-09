@@ -1,3 +1,10 @@
+"""My package with utility functions.
+
+This package provides various utility functions for common operations
+like string manipulation, mathematical calculations, and more.
+"""
+
+
 def hello() -> str:
     """Return a greeting message from the package.
 
