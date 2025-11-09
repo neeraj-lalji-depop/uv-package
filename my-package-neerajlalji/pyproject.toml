@@ -56,10 +56,12 @@ convention = "google"
 
 [tool.commitizen]
 name = "cz_conventional_commits"
-version = "0.3.1"
+version_provider = "uv"
 version_files = [
-    "pyproject.toml:version",
     "src/my_package_neerajlalji/__version__.py:__version__"
 ]
 update_changelog_on_bump = true
+changelog_file = "docs/CHANGELOG.md"
 tag_format = "my-package-neerajlalji/v$version"
+# legacy_tag_formats = ["v$version"]  # Recognize old tag format
+ignored_tag_formats = ["*"]  # Tags to completely ignore
