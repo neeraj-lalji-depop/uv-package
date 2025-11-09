@@ -21,7 +21,7 @@ def hello() -> str:
 
 
 def add_numbers(a: float, b: float) -> float:
-    """Add two numbers together.
+    """Add two float numbers together.
 
     Args:
         a: The first number to add.
