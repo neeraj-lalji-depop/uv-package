@@ -62,4 +62,4 @@ version_files = [
     "src/my_package_neerajlalji/__version__.py:__version__"
 ]
 update_changelog_on_bump = true
-tag_format = "v$version"
+tag_format = "my-package-neerajlalji/v$version"
